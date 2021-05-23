@@ -1,0 +1,16 @@
+NMAP 
+nmap -sS -sC -sV <IP> -oN intialscan.txt
+nmap -p- <IP> -oN allports.txt
+
+
+GOBUSTER
+gobuster dir -u http://url -w /location/wordlist/file.txt
+gobuster vhost -u http://url -w /location/wordlist/file.txt
+
+
+Enum4Linux
+
+WFUZZ
+
+WPSCAN
+
