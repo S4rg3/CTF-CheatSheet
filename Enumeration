@@ -3,9 +3,26 @@ nmap -sS -sC -sV <IP> -oN intialscan.txt
 nmap -p- <IP> -oN allports.txt
 
 
+Using Netcat
+nc <target ip> 80
+
+This will connect to the webserver which will allow you to send a request command
+
+Head / HTTP/1.0
+
+Hit enter twice as all headers have two spaces between them and the request. This should then 
+return the Header of the request.
+
+Fingerprinting 
+
+httpprint -P0 -h <target> -s <signature file> (located in usr/share/)
+
+
+
 GOBUSTER
 gobuster dir -u http://url -w /location/wordlist/file.txt
 gobuster vhost -u http://url -w /location/wordlist/file.txt
+
 
 
 Enum4Linux
@@ -14,4 +31,4 @@ WFUZZ
 
 WPSCAN
 
-d
+
