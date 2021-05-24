@@ -1,1 +1,13 @@
 
+
+Locating all backup files 
+find /var /etc /bin /sbin /home /usr/local/bin /usr/local/sbin /usr/bin /usr/games /usr/sbin /root /tmp -type f \( -name "*backup*" -o -name "*\.bak" -o -name "*\.bck" -o -name "*\.bk" \) 2>/dev/null 
+
+
+If I can get it to run 
+This depends on the version of Linux being used. Kernel Exploit Dirty Cow
+https://github.com/FireFart/dirtycow/blob/master/dirty.c
+
+Files containing password 
+grep --color=auto -rnw '/' -ie "PASSWORD" --color=always 2> /dev/null
+find . -type f -exec grep -i -I "PASSWORD" {} /dev/null \;
