@@ -39,6 +39,10 @@ showmount -e 10.10.10.10
 smbclient -L 10.10.10.10
 
 
+SMB 
+nmap -v -sS -p 445,139 -Pn --script smb-vuln* --script-args=unsafe=1 -oA smb_vuln_scan_192.168.189.42 192.168.189.42
+
+
 Enum4Linux
 
 WFUZZ
