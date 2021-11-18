@@ -63,3 +63,57 @@ OK
 https://book.hacktricks.xyz/pentesting/6379-pentesting-redis
 ```
 
+### SQL
+```
+sqlmap -u http://192.168.202.163/login/index.php?id=1 --batch 
+--batch bypasses all options when running commands
+
+```
+
+## Enumerating Discovered Ports
+
+### 22 - SSH 
+```
+nc -vn <IP> 22
+  
+msf> use scanner/ssh/ssh_enumusers
+
+hydra -L user.txt -P password.txt {IP} 22
+```
+  
+### 21 FTP 
+```
+Anonymous Login Enabled
+ftp {IP}
+anonymous - Username
+anonymous - Password 
+  ls -al 
+  
+nmap --script ftp-* -p 21 <ip>
+
+Connecting in a browser 
+
+ftp://anonymous:anonymous@10.10.10.10
+```
+
+###
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
