@@ -98,7 +98,10 @@ Connecting in a browser
 ftp://anonymous:anonymous@10.10.10.10
 ```
 
-###
+### 80/443 HTTP/HTTPS
+#### Nikto 
+```
+nikto -h {URL}
 ```
 
 
