@@ -91,8 +91,10 @@ anonymous - Password
   
 nmap --script ftp-* -p 21 <ip>
 
-Connecting in a browser 
+Downloads all files in FTP 
+wget -m ftp://anonymous:anonymous@10.10.10.10
 
+Connecting in a browser 
 ftp://anonymous:anonymous@10.10.10.10
 ```
 
