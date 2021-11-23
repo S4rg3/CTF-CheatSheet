@@ -112,10 +112,11 @@ sublist3r -d url.com
 ```
 
 ## XSS
+### Testing if there is a xss vulnrability 
+```
+<script>alert("testing")</script>
 
-
-
-
+```
 
 
 
