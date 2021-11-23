@@ -102,12 +102,16 @@ ftp://anonymous:anonymous@10.10.10.10
 #### Nikto 
 ```
 nikto -h {URL}
+nikto -h {URL} | tee nikto
 ```
 
+## Subdomains 
+### Sublister
+```
+sublist3r -d url.com
+```
 
-
-
-
+## XSS
 
 
 
