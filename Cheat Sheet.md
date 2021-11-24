@@ -13,12 +13,14 @@ gobuster vhost -u http://url -w /location/wordlist/file.txt
 /usr/share/seclists/Discovery/Web-Content/big.txt  
 /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt  
 ```
+
+
 ### Enum4Linux
 ```
 enum4linux -e options http://[ip]
 ```
 
-### HTTP Request 
+### HTTP Request Banner Grabbing
 ```
 Using Netcat
 nc <target ip> 80
