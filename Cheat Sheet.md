@@ -48,6 +48,8 @@ showmount -e 10.10.10.10
 
 smbclient -L 10.10.10.10
 
+nmap -Pn -p445 - open - max-hostgroup 3 - smb-vuln-ms17-010 script <ip_netblock>
+
 ```
 ### Redis
 
