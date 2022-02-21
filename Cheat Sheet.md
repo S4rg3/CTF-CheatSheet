@@ -4,6 +4,13 @@
 nmap -sS -sC -oN initial_scan.txt {IP}  
 nmap -sS -p- -oN all_ports.txt {IP}
 ```
+```
+Scripts
+nmap -p 445 --script ms-sql-info <host>
+nmap -p 1433 --script ms-sql-info --script-args mssql.instance-port=1433 <host>
+nmap --script smb-enum-users.nse -p445 <host>
+sudo nmap -sU -sS --script smb-enum-users.nse -p U:137,T:139 <host>
+```
 ### Gobuster 
 ```
 gobuster dir -u http://url -w /location/wordlist/file.txt  
