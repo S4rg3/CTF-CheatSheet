@@ -126,10 +126,16 @@ sublist3r -d url.com
 <script>alert("testing")</script>
 
 ```
-
-
+```
+xsser -u “http://192.168.169.130/xss/example1.php?name=hacker” -p (the_responce_from_the_field_intercepted_in_burp)
+xsser -u “http://192.168.169.130/xss/example1.php?name=hacker” –auto –reverse-check -s
+xsser -u “http://192.168.169.130/xss/example1.php?name=hacker” –heuristic
+xsser –gtk - Launch interface
+```
 
 ## Active Directory
+
+
 ### Enumeration
 ### Exploits
 ### Post Exploitation
