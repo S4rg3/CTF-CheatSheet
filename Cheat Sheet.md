@@ -149,8 +149,13 @@ python Responder.py -l tun0 -rdw
 python ntlmrelayx.py -tf targets.txt -smb2support (wait for an event)
 ```
 
-### Exploits
-### Post Exploitation
+### Post Compromise Enumeration
+#### Powerview
+```
+PowerView Cheat Sheet:  https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993!
+
+#### Bloodhound
+### Post Compromise Attacks
 
 
 
