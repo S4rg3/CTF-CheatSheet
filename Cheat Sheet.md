@@ -37,7 +37,16 @@ useradd <uname>
 useradd -u <UID> -g <group> <uname>  #UID can be something new than existing, this command is to add a user to a specific group
 ```
 
+### Enable RDP on Windows machine
+```
+:: Enable remote access.
 
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+
+:: allow through firewall.
+
+netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
+```
 
 ## Initial Enumeration
 ### Nmap
